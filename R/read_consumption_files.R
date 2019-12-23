@@ -1,9 +1,9 @@
 
 full_path <- "./data/input/pateretais/"
-df <- read_in_consumption_files(full_path = full_path)
+df <- read_consumption_files(full_path = full_path)
 mutate_consumption_files(df)
 
-read_in_consumption_files <- function(full_path){
+read_consumption_files <- function(full_path){
   require(readxl)
   require(dplyr)
 
