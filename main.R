@@ -97,7 +97,7 @@ df <- read_sales_files(full_path = full_path)
 df_sales <- mutate_price_files(df)
 
 df_consumption %>%
-  dplyr::left_join(df_sales, by=c("Date", "Time_from", "Time_to")) %>%
+  dplyr::left_join(df_sales, by=c("Date", "Time_from", "Time_to")) %>% View()
   data.table::fwrite(
     paste0("./calculated_prices_", as.character(Sys.Date()), "_",
            as.character(as.numeric(Sys.time())), ".csv")
